@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="E loan" max_length="40" name="x_490092_e_loan_e_loan" type="collection">
+        <element label="Address" max_length="1000" name="address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="city" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Country" max_length="40" name="country" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="County" max_length="40" name="county" type="string"/>
+        <element choice="3" default="select a field" label="Estimated credit score" max_length="40" name="estimated_credit_score" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="300-499" sequence="0" value="300-499"/>
+                <element inactive_on_update="false" label="500-699" sequence="1" value="500-699"/>
+                <element inactive_on_update="false" label="700" sequence="2" value="700"/>
+                <element inactive_on_update="false" label="Select a field" sequence="3" value="select a field"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="First name" max_length="40" name="first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Last name" max_length="40" name="last_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="home" label="Loan type" max_length="40" name="loan_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Auto" value="auto"/>
+                <element inactive_on_update="false" label="Businees" value="businees"/>
+                <element inactive_on_update="false" label="Home" value="home"/>
+                <element inactive_on_update="false" label="Personal" value="personal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Phone number" max_length="40" name="phone_number" type="string"/>
+        <element label="Social security number" mandatory="true" max_length="40" name="social_security_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="state" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Zip" max_length="40" name="zip" type="string"/>
+    </element>
+</database>
